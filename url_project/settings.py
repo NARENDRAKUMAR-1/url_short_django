@@ -122,10 +122,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-    # this static we put at outer side
-)
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+#     # this static we put at outer side
+# )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
@@ -138,3 +138,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 import django_heroku
 # // to deploy on heroku
 django_heroku.settings(locals())
+
+# heroku config:set DISABLE_COLLECTSTATIC=1
